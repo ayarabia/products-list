@@ -1,17 +1,14 @@
 import './App.css';
 import React, {Component} from 'react';
 import Items from './components/item/items'
-import AddItem from './components/addItem/addItem'
-import Total from './components/total/total'
-
 class App extends Component {
   state = {
     items: [
-      {id:1, product:'Pen', price:2},
-      {id:2, product:'Book', price:10}
+      {id:1, product:'Pen', price:2 ,quantity:1},
+      {id:2, product:'Book', price:10 ,quantity:1}
     ]
   }
-
+ 
   deleteItem = (id) => {
     let items = this.state.items
     let i = items.findIndex(item => item.id === id)
@@ -25,20 +22,23 @@ class App extends Component {
     ) : item.id = 1
     console.log(item.id)
     let items = this.state.items
-    items.push(item)
+    console.log({...item,quantity:1});
+    items.push({...item , quantity:1})
     this.setState({items: items})
+    console.log(items);
+    
   }
-
+ 
   render() {
     return (
+     
       <div className="container">
         <h1>Product List React App</h1>
         <div className="table">
-          <Items items={this.state.items} del={this.deleteItem}/>
-          <AddItem add={this.addItem}/>
-          <Total items={this.state.items}/>
+          <Items items={this.state.items} del={this.deleteItem} add={this.addItem} />
         </div>
       </div>
+   
     )
   }
 }

@@ -30,9 +30,9 @@ class addItem extends Component {
                     <input type="number" value={this.state.price} placeholder="Enter Price" id="price" onChange={this.handleChange} required/>
                     <input type="submit" value="Add"/>
                 </form>
+           
             </div>
         )
     }
 }
-
 export default addItem;

@@ -76,7 +76,7 @@ form input[type="text"], form input[type="number"]{
 }
 form input[type="submit"]{
     font-weight: bold;
-    background-color: #0cb90c;
+    background-color: #4CAF50;
     color: #e3e3e3;
     font-size: 19px;
     letter-spacing: 0.6px;
@@ -90,4 +90,16 @@ form input[type="submit"]:hover{
     padding: 10px;
     font-size: 18px;
     border: 2px solid #08080833;
+}
+.increase ,.decrease {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 10px
+}
+.decrease {
+    background-color: gray;
 }
